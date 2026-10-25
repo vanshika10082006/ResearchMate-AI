@@ -91,3 +91,17 @@ This implementation matches the methodology diagram:
 
 ### Paper Comparison
 ![Paper Comparison](screenshots/compare-papers.jpg)
+### Dashboard and PDF Upload
+![ResearchMate AI Dashboard](screenshots/dashboard.jpg)
+
+### Paper Processing
+![Research paper processing](screenshots/processing-upload.jpg)
+
+### Compare Research Papers
+![Compare research papers](screenshots/compare-papers.jpg)
+
+### Research Paper Analysis
+![Research paper analysis workspace](screenshots/paper-analysis.jpg)
+
+### Analysis Details
+![Research paper analysis details](screenshots/paper-analysis-details.jpg)
