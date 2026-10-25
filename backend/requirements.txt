@@ -1,0 +1,10 @@
+flask==3.0.3
+flask-cors==4.0.1
+google-generativeai==0.8.3
+pdfplumber==0.11.4
+python-dotenv==1.0.1
+numpy==2.2.6
+werkzeug==3.0.4
+litellm
+html2text
+gunicorn

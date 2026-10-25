@@ -1,0 +1,223 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-sans: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    --font-display: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: #131315;
+    color: #e5e1e4;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+  }
+
+  code, pre, .font-mono {
+    font-family: var(--font-mono);
+  }
+}
+
+/* Custom scrollbar styling */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #131315;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2a2a2c;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #353437;
+}
+
+.markdown-content {
+  line-height: 1.7;
+}
+
+.markdown-content > :first-child {
+  margin-top: 0;
+}
+
+.markdown-content > :last-child {
+  margin-bottom: 0;
+}
+
+.markdown-content p,
+.markdown-content ul,
+.markdown-content ol,
+.markdown-content blockquote,
+.markdown-content pre {
+  margin: 0.75rem 0;
+}
+
+.markdown-content h1,
+.markdown-content h2,
+.markdown-content h3,
+.markdown-content h4 {
+  color: #e5e1e4;
+  font-weight: 700;
+  line-height: 1.35;
+  margin: 1.25rem 0 0.5rem;
+}
+
+.markdown-content h1 { font-size: 1.25rem; }
+.markdown-content h2 { font-size: 1.1rem; }
+.markdown-content h3,
+.markdown-content h4 { font-size: 1rem; }
+
+.markdown-content ul,
+.markdown-content ol {
+  padding-left: 1.25rem;
+}
+
+.markdown-content li {
+  margin: 0.35rem 0;
+}
+
+.markdown-content strong {
+  color: #c0c1ff;
+  font-weight: 700;
+}
+
+.markdown-content em {
+  color: #c7c4d7;
+}
+
+.markdown-content blockquote {
+  border-left: 2px solid #8083ff;
+  color: #c7c4d7;
+  padding-left: 0.85rem;
+}
+
+.markdown-content a {
+  color: #7bd0ff;
+  text-decoration: underline;
+}
+
+.markdown-content code {
+  background: #0e0e10;
+  border: 1px solid #353437;
+  border-radius: 0.3rem;
+  color: #c0c1ff;
+  padding: 0.1rem 0.3rem;
+}
+
+.markdown-content pre {
+  background: #0e0e10;
+  border: 1px solid #353437;
+  border-radius: 0.5rem;
+  overflow-x: auto;
+  padding: 0.75rem;
+}
+
+.markdown-content pre code {
+  background: transparent;
+  border: 0;
+  padding: 0;
+}
+
+/* ── Annotation Micro-Animations ── */
+
+@keyframes highlight-fadein {
+  from { background-color: transparent; }
+  to { /* inherits inline bg color */ }
+}
+
+.animate-highlight-fadein {
+  animation: highlight-fadein 200ms ease-out;
+}
+
+@keyframes note-popover-scale {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) translateY(10px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(-50%) translateY(10px) scale(1);
+  }
+}
+
+.animate-note-popover {
+  animation: note-popover-scale 150ms ease-out;
+}
+
+@keyframes bookmark-fill {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.25); }
+  100% { transform: scale(1); }
+}
+
+.animate-bookmark-fill {
+  animation: bookmark-fill 200ms ease-out;
+}
+
+@keyframes sidebar-slide {
+  from {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-sidebar-slide {
+  animation: sidebar-slide 220ms ease-out;
+}
+
+@keyframes pulse-highlight {
+  0% { box-shadow: 0 0 0 0 rgba(128, 131, 255, 0.5); }
+  50% { box-shadow: 0 0 8px 4px rgba(128, 131, 255, 0.35); }
+  100% { box-shadow: 0 0 0 0 rgba(128, 131, 255, 0); }
+}
+
+.animate-pulse-highlight {
+  animation: pulse-highlight 600ms ease-out;
+}
+
+/* ── Library View Additions ── */
+
+@keyframes slide-in-from-bottom-4 {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
+.animate-in.slide-in-from-bottom-4 {
+  animation: slide-in-from-bottom-4 200ms ease-out;
+}
+
+/* Thin scrollbar for activity strip */
+.scrollbar-thin {
+  scrollbar-width: thin;
+  scrollbar-color: #2a2a2c transparent;
+}
+.scrollbar-thin::-webkit-scrollbar {
+  height: 4px;
+}
+.scrollbar-thin::-webkit-scrollbar-track {
+  background: transparent;
+}
+.scrollbar-thin::-webkit-scrollbar-thumb {
+  background: #2a2a2c;
+  border-radius: 9999px;
+}

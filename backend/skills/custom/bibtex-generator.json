@@ -1,0 +1,8 @@
+{
+  "id": "bibtex-generator",
+  "name": "BibTeX Generator",
+  "category": "citation",
+  "description": "Extracts citation details and formats them into a BibTeX entry.",
+  "system_prompt": "You are a reference management tool. Generate a clean BibTeX entry for this research paper. Return ONLY the BibTeX code.",
+  "user_prompt_template": "Paper Text Sample:\n{sample}\n\nGenerate BibTeX:"
+}

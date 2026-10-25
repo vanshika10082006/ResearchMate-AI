@@ -1,0 +1,33 @@
+# Python environments and generated files
+backend/.venv/
+backend/venv/
+**/__pycache__/
+*.py[cod]
+*.pyo
+
+# Local secrets and environment files
+.env
+.env.*
+!.env.example
+
+# Runtime uploads and generated vector-store data
+backend/uploads/
+backend/storage/
+*.faiss
+
+# Frontend dependencies and build output
+frontend/node_modules/
+frontend/dist/
+
+# Logs and local tooling files
+*.log
+.pytest_cache/
+.coverage
+coverage/
+.vscode/
+.idea/
+
+# OS metadata
+.DS_Store
+Thumbs.db
+desktop.ini
