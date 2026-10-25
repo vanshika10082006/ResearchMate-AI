@@ -87,3 +87,7 @@ This implementation matches the methodology diagram:
 - Documents are stored in memory only — restarting the backend clears them.
 - Single-PDF context per session (no multi-document comparison yet).
 - No user accounts / persistence layer yet — could be added with a database.
+## 📸 Project Screenshots
+
+### Paper Comparison
+![Paper Comparison](screenshots/compare-papers.jpg)
